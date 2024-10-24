@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 """
+@author: Reyn Blessil Santos
 Exercise 8: Simple Search - 30 Marks
 """
 #i created a list with square brackets around it and commas separating each string
