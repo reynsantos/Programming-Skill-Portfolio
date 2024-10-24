@@ -19,18 +19,17 @@ pass2=int(input("You have 5 attempts in total. Please enter your password: ")) #
 i=1 #initialized the 'i' as my counter
 maximum=5 #declared a maximum integer variable to subtract from how many attempts the user has left
 remaining=maximum-i
-while i<5 and password!=pass2: #i could have used a 'for' loop with a range(4), however it was better to continue using a while loop and use a logical operator.
+while i<5:
     if pass2!=password: #i then used an if statement so that if the password was not the same, the program would print incorrect
         print(f"Incorrect. You have {remaining} remaining attempts.") #the subtraction represents the number of trials the user has left
         i+=1 #i increment to my i value, otherwise there would be an inifinite loop, since i only want it to repeat 5 times
         remaining=maximum-i
         pass2=int(input("Please enter your password: ")) #it then asks for the password again
-        if password==pass2: #if the password is the same, the code prints that the user successfully logged in
-            print("You have successfully logged in!")
-        else: #if it is not the same values, the program states that max number is reached and the authorities have been alerted
-            print("Inccorect, maximum number of attempts is reached. Be warned that the authorities have been alerted.")
     else: #the final else statement states that if the user input the correct password even from first try, it shall not repeat the loop
-        print("Correct password, Welcome!")
-
-print("Correct password, Welcome!") #this print statement exists outside of my loop so that if the user input is immediately correct, it shall print correct
-
+        print("Correct password.")
+        break
+    
+if password!=pass2: #if the password is the same, the code prints that the user successfully logged in
+            print("Inccorect, maximum number of attempts is reached. Be warned that the authorities have been alerted.")
+else: #if it is not the same values, the program states that max number is reached and the authorities have been alerted
+            print("You have successfully logged in!")
