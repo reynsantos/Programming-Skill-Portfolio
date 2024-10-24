@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-Exercise 9: Hello - 10 Marks
 @author: Reyn Blessil Santos
+Exercise 9: Hello - 10 Marks
 """
 
 def hello():
