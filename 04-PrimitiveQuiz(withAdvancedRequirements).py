@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-Exercise 4: Primitive Quiz - 30 Marks
 @author: Reyn Blessil Santos
+Exercise 4: Primitive Quiz - 30 Marks
 """
 #i get an input from the user, must be a string since the capital of france is concatenation of letters
 response = input("What is the capital of France?")
