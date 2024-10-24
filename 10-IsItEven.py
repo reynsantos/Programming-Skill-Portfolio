@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-Exercise 10: Is it even? - 35 Marks
-
 @author: Reyn Blessil Santos
+Exercise 10: Is it even? - 35 Marks
 """
 #i created a function called 'oddoreven' with the parameter val for the the value that the user inputs in the main function
 def oddoreven(val):
