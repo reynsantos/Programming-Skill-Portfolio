@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-Exercise 6: Brute Force Attack - 30 Marks
 @author: Reyn Blessil Santos
+Exercise 6: Brute Force Attack - 30 Marks
 """
 
 password=12345 #i defined the password in an integer
