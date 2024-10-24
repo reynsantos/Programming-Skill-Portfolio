@@ -4,7 +4,6 @@ Exercise 9: Hello - 10 Marks
 @author: Reyn Blessil Santos
 """
 
-
 def hello():
     print("Hello")  #i filled in the blank to print "Hello" to the console
 
