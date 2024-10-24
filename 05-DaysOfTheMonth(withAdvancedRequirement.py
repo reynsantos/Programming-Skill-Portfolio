@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 """
+@author: Reyn Blessil Santos
 Exercise 5: Days of the Month - 30 Marks
 """
 #i created a dictionary, in which its keys are assigned by numbers 1 to 12 for each day of the month, and its values carry the number of days in each of those months
