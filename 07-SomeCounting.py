@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-Exercise 7: Some Counting - 20 Marks
-
 @author: Reyn Blessil Santos
+Exercise 7: Some Counting - 20 Marks
 """
 print("Counts up from 0 to 50 in increments of 1:") #i used a for loop, i is already initialized as 0 if not stated, and repeats 50 times
 for i in range(51):
