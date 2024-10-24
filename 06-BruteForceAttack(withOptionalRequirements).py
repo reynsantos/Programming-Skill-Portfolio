@@ -10,7 +10,7 @@ pass1=int(input("Enter your password: "))#i asked the user for an integer user i
 while pass1!=password: #i used a while loop that as long as the two integers are not equal to each other, then the program will stay inside the loop
     pass1=input("Password incorrect, please try again. Enter your password: ")
     break #the program only exits the loop if the passwords are now equal to each other
-print("Correct password, Welcome!") #the program prints that the password is correct directly after exitting the looop
+print("Correct password, Welcome!") #the program prints that the password is correct directly after exiting the looop
 
 #Optional Requirements
 
