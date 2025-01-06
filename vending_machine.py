@@ -66,23 +66,31 @@ def display_products(products):
     for product_id, product_info in products.items():
         print(f"{product_id}. {product_info['name']} - ${product_info['price']} (Category: {product_info['category']}) - Stock: {product_info['stock']}")
 
-# Function to suggest products based on category
-def suggest_products(products, category):
+def suggest_products(products, category, exclude_product_id):
     print("\n--- Suggested Products ---")
-    suggestions = [product for product in products.values() if product['category'] == category]
+    # Filter products: same category, not the purchased product, and in stock
+    suggestions = [
+        product
+        for product_id, product in products.items()
+        if product['category'] == category and str(product_id) != str(exclude_product_id) and product['stock'] > 0
+    ]
+
+    # Display suggestions
     if suggestions:
         for product in suggestions:
             print(f"{product['name']} - ${product['price']} (Stock: {product['stock']})")
     else:
         print("No suggestions available.")
 
+
+
 # Function to handle purchasing
 def purchase_item(products):
     display_products(products)
-    
+
     try:
         product_id = int(input("\nEnter the number of the product you want to buy: "))
-        
+
         if product_id in products:
             product = products[product_id]
             print(f"\nYou selected: {product['name']} - ${product['price']}")
@@ -104,13 +112,13 @@ def purchase_item(products):
                         change = money_inserted - total_price
                         print(f"\n{quantity} {product['name']} dispensed.")
                         print(f"Your change: ${change:.2f}")
-                        
+
                         # Update stock in the dictionary and database
                         product['stock'] -= quantity
                         update_stock_in_db(product_id, product['stock'])
 
                         # Suggest products from the same category
-                        suggest_products(products, product['category'])
+                        suggest_products(products, product['category'], product_id)
 
                     else:
                         print("\nYou do not have enough money for this item.")
@@ -121,6 +129,7 @@ def purchase_item(products):
 
     except ValueError:
         print("\nInvalid input. Please enter a valid number.")
+
 
 # Main function to run the vending machine
 def main():
